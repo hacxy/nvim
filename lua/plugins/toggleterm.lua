@@ -3,14 +3,14 @@ return {
   "akinsho/toggleterm.nvim",
   config = function()
     require("toggleterm").setup({
-      open_mapping = [[<c-`>]],
+      open_mapping = [[<c-_>]],
       shade_terminals = false,
       shell = "zsh --login",
     })
   end,
 
   keys = {
-    { [[<c-`>]] },
-    { "<leader>0", "<Cmd>2ToggleTerm<Cr>", desc = "Terminal #2" },
+    { [[<c-_>]] },
+    -- { "<c-`>", "<Cmd>ToggleTerm<Cr>", desc = "Terminal #2" },
   },
 }

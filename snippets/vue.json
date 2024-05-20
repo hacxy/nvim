@@ -1,0 +1,17 @@
+{
+  "Print to console": {
+    "prefix": "clo",
+    "body": ["console.log($0)"],
+    "description": "Log output to console"
+  },
+  "const": {
+    "prefix": "cons",
+    "body": ["const $0"],
+    "description": "const"
+  },
+  "imd": {
+    "prefix": "imd",
+    "body": ["import {  } from '$0'"],
+    "description": "import"
+  }
+}
