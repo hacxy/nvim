@@ -6,6 +6,9 @@ return {
       statusline = true,
     },
     filesystem = {
+      filtered_items = {
+        hide_dotfiles = false,
+      },
       bind_to_cwd = true,
       follow_current_file = { enabled = true },
       use_libuv_file_watcher = true,
