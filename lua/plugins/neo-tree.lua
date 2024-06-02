@@ -7,7 +7,13 @@ return {
     },
     filesystem = {
       filtered_items = {
-        hide_dotfiles = false,
+        hide_dotfiles = true,
+        never_show = {
+          ".git",
+        },
+        -- hide_by_name = {
+        --   ".git",
+        -- },
       },
       bind_to_cwd = true,
       follow_current_file = { enabled = true },
