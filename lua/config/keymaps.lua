@@ -3,6 +3,5 @@
 -- Add any additional keymaps here
 -- local map = LazyVim.safe_keymap_set
 
--- vim.keymap.del("n", "<c-_>")
--- vim.keymap.del("n", "<c-/>")
--- vim.keymap.del("t", "<C-/>")
+-- vim.keymap.del("n", "<C-/>")
+-- vim.keymap.del("n", "<c-`>")
