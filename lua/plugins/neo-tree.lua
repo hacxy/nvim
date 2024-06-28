@@ -11,6 +11,16 @@ return {
         never_show = {
           ".git",
         },
+        always_show = { -- remains visible even if other settings would normally hide it
+          ".gitignored",
+          ".vitepress",
+          ".env",
+        },
+
+        -- always_show_by_pattern = { -- uses glob style patterns
+        --   ".env",
+        -- },
+
         -- hide_by_name = {
         --   ".git",
         -- },
