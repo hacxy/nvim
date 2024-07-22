@@ -1,6 +1,6 @@
 # neovim configuration
 
-this is my neovim configuration
+This is my neovim configuration for macos.
 
 # Prerequisites
 
