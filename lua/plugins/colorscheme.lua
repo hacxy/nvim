@@ -1,31 +1,26 @@
 return {
-  -- {
-  --   "folke/tokyonight.nvim",
-  --   lazy = true,
-  --   opts = {
-  --     style = "storm",
-  --     transparent = true,
-  --     transparent_sidebar = true,
-  --
-  --     styles = {
-  --
-  --       sidebars = "transparent",
-  --       floats = "transparent",
-  --     },
-  --   },
-  -- },
   {
-    "catppuccin/nvim",
+    "folke/tokyonight.nvim",
     lazy = true,
-    name = "catppuccin",
     opts = {
-      transparent_background = true,
+      style = "storm",
+      -- transparent = true,
+      styles = {
+        -- sidebars = "transparent",
+        -- floats = "transparent",
+      },
     },
   },
+  -- {
+  --   "catppuccin/nvim",
+  --   lazy = true,
+  --   name = "catppuccin",
+  --   opts = {},
+  -- },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "tokyonight",
     },
   },
 }

@@ -13,5 +13,20 @@
     "prefix": "imd",
     "body": ["import {  } from '$0'"],
     "description": "import"
+  },
+  "reactFunctionMemoComponent": {
+    "prefix": "rmc",
+    "body": [
+      "import { memo } from 'react'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = memo(() => {",
+      "  return (",
+      "    <div>${1:first}</div>",
+      "  )",
+      "})",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Creates a React Memo Function Component with ES7 module system"
   }
 }
