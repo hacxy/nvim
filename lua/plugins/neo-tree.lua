@@ -7,14 +7,16 @@ return {
     },
     filesystem = {
       filtered_items = {
-        hide_dotfiles = true,
+        visible = false,
+        hide_dotfiles = false,
+        hide_gitignored = false,
         never_show = {
           ".git",
         },
         always_show = { -- remains visible even if other settings would normally hide it
-          ".gitignored",
           ".vitepress",
           ".env",
+          ".env.*",
         },
 
         -- always_show_by_pattern = { -- uses glob style patterns
@@ -34,6 +36,7 @@ return {
       mappings = {
         ["<space>"] = "none",
       },
+      width = 30,
     },
     default_component_configs = {
       indent = {

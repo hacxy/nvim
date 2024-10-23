@@ -34,3 +34,9 @@ autocmd({ "FileType" }, {
     vim.wo.conceallevel = 0
   end,
 })
+
+-- 设置选中的文本和背景色
+
+vim.cmd([[
+  highlight Visual guifg=#FFC0CB guibg=#778899
+]])

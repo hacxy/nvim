@@ -3,3 +3,5 @@
 -- Add any additional options here
 --
 vim.opt.iskeyword:append("-")
+
+require("gui.neovide")
