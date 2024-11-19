@@ -2,6 +2,10 @@
 
 This is my neovim configuration for macos.
 
+# Screenshot
+
+![](https://raw.githubusercontent.com/hacxy/hacxy/main/images/202411191102940.png)
+
 # Prerequisites
 
 - Neovim >= 0.9.0 (needs to be built with LuaJIT)
