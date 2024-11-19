@@ -1,4 +1,4 @@
-# neovim configuration
+# Neovim configuration
 
 This is my neovim configuration for macos.
 
