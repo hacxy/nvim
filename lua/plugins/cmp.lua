@@ -23,9 +23,39 @@ return {
         end,
       },
 
+      -- 覆盖默认快捷键
+      -- mapping = vim.tbl_extend("force", opts.mapping, {
+      --   -- 上一个补全项（默认 <C-p>）
+      --   ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+      --   -- 下一个补全项（默认 <C-n>）
+      --   ["<Tab>"] = cmp.mapping.select_next_item(),
+      --
+      --   -- 其他自定义映射（可选）
+      --   ["<C-j>"] = cmp.mapping.select_next_item(), -- 示例：Ctrl+j 向下
+      --   ["<C-k>"] = cmp.mapping.select_prev_item(), -- 示例：Ctrl+k 向上
+      -- }),
+      --
+      --
       mapping = cmp.mapping.preset.insert({
-        ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-        ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+
+        ["<C-j>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_next_item()
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
+
+        ["<C-k>"] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_prev_item()
+          else
+            fallback()
+          end
+        end, { "i", "s" }),
+
+        -- ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+        -- ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-d>"] = cmp.mapping.complete(),
@@ -40,6 +70,7 @@ return {
           fallback()
         end,
       }),
+
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "luasnip" },
