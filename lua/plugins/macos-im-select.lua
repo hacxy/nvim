@@ -1,3 +1,8 @@
+local has_system_command = vim.fn.executable("im-select") == 1
+if not has_system_command then
+  return {}
+end
+
 return {
   {
     "keaising/im-select.nvim",

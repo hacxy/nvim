@@ -1,6 +1,3 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
--- local map = LazyVim.safe_keymap_set
-
--- vim.keymap.del("n", "<C-j>")
+-- 键盘映射（Keymaps）会在 VeryLazy 事件时自动加载
+-- 默认的键盘映射总是会被设置：https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- 在此处添加任何额外的键盘映射

@@ -1,7 +1,3 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
---
-vim.opt.iskeyword:append("-")
-
-require("gui.neovide")
+-- 选项（Options）会在 lazy.nvim 启动之前自动加载
+-- 默认的选项总是会被设置：https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- 在此处添加任何额外的选项
