@@ -1,0 +1,9 @@
+{
+  "Print to license": {
+    "prefix": "license",
+    "body": [
+      "## License\n\n[MIT](./LICENSE) License &copy; 2023-PRESENT [Hacxy](https://github.com/hacxy)"
+    ],
+    "description": "MIT License"
+  }
+}

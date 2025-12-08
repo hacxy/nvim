@@ -1,0 +1,37 @@
+{
+  "Print to console": {
+    "prefix": "clo",
+    "body": ["console.log($0)"],
+    "description": "Log output to console"
+  },
+  "con": {
+    "prefix": "cons",
+    "body": ["const $0"],
+    "description": "const"
+  },
+  "const": {
+    "prefix": "cons",
+    "body": ["const $0"],
+    "description": "const"
+  },
+  "imd": {
+    "prefix": "imd",
+    "body": ["import {  } from '$0'"],
+    "description": "import"
+  },
+  "reactFunctionMemoComponent": {
+    "prefix": "rmc",
+    "body": [
+      "import React, { memo } from 'react'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}}:React.FC = memo(() => {",
+      "  return (",
+      "    <div>${1:first}</div>",
+      "  )",
+      "})",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Creates a React Memo Function Component with ES7 module system"
+  }
+}

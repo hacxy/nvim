@@ -1,7 +1,7 @@
 -- snacks.nvim 插件配置
 -- 这是一个文件选择器插件，提供快速的文件导航功能
 return {
-  "snacks.nvim",
+  "folke/snacks.nvim",
   ---@type snacks.Config
   opts = {
     -- 选择器配置
