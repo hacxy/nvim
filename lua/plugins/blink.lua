@@ -5,6 +5,7 @@ return {
   dependencies = {},
   opts = {
     keymap = {
+      ["<Tab>"] = { "accept", "fallback" },
       ["<C-k>"] = { "select_prev", "fallback" },
       ["<C-j>"] = { "select_next", "fallback" },
       ["<C-D>"] = { "show", "show_documentation", "hide_documentation" },
