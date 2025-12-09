@@ -1,5 +1,5 @@
-local vscode_settings = require("config.vscode-settings")
-
+---配置 nvim-lspconfig
+---LSP 服务器配置
 return {
   "neovim/nvim-lspconfig",
   opts = {
@@ -16,14 +16,45 @@ return {
         },
       },
       eslint = {
+        filetypes = {
+          "javascript",
+          "javascriptreact",
+          "javascript.jsx",
+          "typescript",
+          "typescriptreact",
+          "typescript.tsx",
+          "vue",
+          "html",
+          "markdown",
+          "json",
+          "jsonc",
+          "yaml",
+          "toml",
+          "xml",
+          "gql",
+          "graphql",
+          "astro",
+          "svelte",
+          "css",
+          "less",
+          "scss",
+          "pcss",
+          "postcss",
+        },
         settings = {
-          codeActionOnSave = {
-            enable = vscode_settings.should_fix_eslint_on_save(),
-            mode = "all",
+          -- 静默样式规则在 IDE 中的显示，但仍自动修复它们
+          rulesCustomizations = {
+            { rule = "style/*", severity = "on", fixable = true },
+            { rule = "format/*", severity = "on", fixable = true },
+            { rule = "*-indent", severity = "on", fixable = true },
+            { rule = "*-spacing", severity = "on", fixable = true },
+            { rule = "*-spaces", severity = "on", fixable = true },
+            { rule = "*-order", severity = "on", fixable = true },
+            { rule = "*-dangle", severity = "on", fixable = true },
+            { rule = "*-newline", severity = "on", fixable = true },
+            { rule = "*quotes", severity = "on", fixable = true },
+            { rule = "*semi", severity = "on", fixable = true },
           },
-          format = vscode_settings.should_use_eslint_format(),
-          validate = "on",
-          onIgnoredFiles = "off",
         },
       },
     },
